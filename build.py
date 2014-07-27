@@ -13,13 +13,14 @@ resources = [
     "install.rdf",
     "chrome.manifest",
     "*.xul",
+    "*.css",
     "locale/*/*.dtd",
     "locale/*/*.properties",
     "defaults/preferences/prefs.js",
     "icon.png", "icon64.png",
     "LICENSE.txt"
     ]
-destination = "extension.xpi"
+destination = "fastaddons.xpi"
 
 
 try:
