@@ -3,7 +3,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-const {unloadWindow} = require("sdk/windows");
+const {unloadWindow} = require("sdk/windows");
 const addons = require("addons");
 
 Cu.import("resource:///modules/CustomizableUI.jsm");
@@ -69,7 +69,7 @@ CustomizableUI.createWidget({
       log(LOG_ERROR, "Failed to build view", ex);
     }
   },
-  onViewShowing: function(evt) {
+  onViewShowing: function(evt) {
     try {
       let document = evt.detail.ownerDocument;
       let window = document.defaultView;
@@ -78,7 +78,7 @@ CustomizableUI.createWidget({
       if (!items) {
         throw new Error("No items");
       }
-      while (items.lastChild) {
+      while (items.lastChild) {
         items.removeChild(items.lastChild);
       }
       let lastType = "", label, numItems = 0;

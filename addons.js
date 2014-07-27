@@ -19,7 +19,7 @@ const TYPES = {
 function update() {
   exports.all = [];
   AddonManager.getAllAddons(all => {
-    for (let a of all) {
+    for (let a of all) {
       if (a.type !== "extension" && a.type !== "userscript") {
         continue;
       }
@@ -68,7 +68,7 @@ exports.toggleAddon = function toggleAddon(addon) {
         addon.name + " was " + (addon.isActive ? "enabled!" : "disabled!")
         );
     }
-    catch (ex) {
+    catch (ex) {
       log(LOG_ERROR, "Failed to toggle " + a.id, ex);
     }
   });
